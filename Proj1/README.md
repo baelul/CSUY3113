@@ -11,4 +11,4 @@ There was one feature that didn't make it into the final game: I planned on havi
 
 I've attached a gif of my game below!
 
-![proj-1-gif](https://github.com/baelul/CSUY3113/Proj1/Project 1.gif)
+![proj-1-gif](https://github.com/baelul/CSUY3113/Proj1/Proj-1.gif)
