@@ -72,7 +72,7 @@ void Initialize() {
     
     glUseProgram(program.programID);
     
-    glClearColor(0.0, 0.4, 0.6, 1);
+    glClearColor(0.0, 0., 0.6, 1);
     
     glEnable(GL_BLEND);
     
