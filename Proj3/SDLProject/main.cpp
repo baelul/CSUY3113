@@ -349,6 +349,8 @@ void Render() {
     
     state.player->Render(&program);
     
+    DrawText(&program, fontTextureId, "Mission Success", 0.75, -0.25f, glm::vec3(-3.375, 0.75, 0));
+    
     if(state.landing->collidedTop) {
         DrawText(&program, fontTextureId, "Mission Success", 0.75, -0.25f, glm::vec3(-3.375, 0.75, 0));
     } else if (state.platforms->collidedTop || state.platforms->collidedRight || state.platforms->collidedLeft) {
