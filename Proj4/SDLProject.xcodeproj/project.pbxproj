@@ -17,10 +17,8 @@
 		7B9DFC5D269FD0A500D88058 /* mush_left.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC53269FD05A00D88058 /* mush_left.png */; };
 		7B9DFC5E269FD0D600D88058 /* enemy.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC4E269FCE8B00D88058 /* enemy.png */; };
 		7B9DFC5F269FD0D900D88058 /* mc.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC4F269FCE8B00D88058 /* mc.png */; };
-		7B9DFC6326A1109400D88058 /* ground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC6226A1108400D88058 /* ground.png */; };
 		7B9DFC6626A1192000D88058 /* pixel_font.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC6526A1191900D88058 /* pixel_font.png */; };
-		7B9DFC6C26A1235100D88058 /* font1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC6B26A1234500D88058 /* font1.png */; };
-		7B9DFC6E26A1274D00D88058 /* pixel_font_green.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC6D26A1274800D88058 /* pixel_font_green.png */; };
+		7B9DFC7226A12BEF00D88058 /* ground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B9DFC7126A12BEA00D88058 /* ground.png */; };
 		DBDF1B532323DE3F007CECB1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B522323DE3F007CECB1 /* main.cpp */; };
 		DBDF1B5E2323DE8D007CECB1 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */; };
 		DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBDF1B5C2323DE8D007CECB1 /* shaders */; };
@@ -43,14 +41,12 @@
 				7B9DFC59269FD09900D88058 /* stem_bott.png in CopyFiles */,
 				7B9DFC58269FD09700D88058 /* stem_mid.png in CopyFiles */,
 				7B9DFC5A269FD09B00D88058 /* sand.png in CopyFiles */,
-				7B9DFC6326A1109400D88058 /* ground.png in CopyFiles */,
 				7B9DFC5D269FD0A500D88058 /* mush_left.png in CopyFiles */,
 				7B9DFC5C269FD0A000D88058 /* mush_mid.png in CopyFiles */,
 				7B9DFC5B269FD09E00D88058 /* mush_right.png in CopyFiles */,
 				7B9DFC5E269FD0D600D88058 /* enemy.png in CopyFiles */,
 				7B9DFC5F269FD0D900D88058 /* mc.png in CopyFiles */,
-				7B9DFC6C26A1235100D88058 /* font1.png in CopyFiles */,
-				7B9DFC6E26A1274D00D88058 /* pixel_font_green.png in CopyFiles */,
+				7B9DFC7226A12BEF00D88058 /* ground.png in CopyFiles */,
 				7B9DFC6626A1192000D88058 /* pixel_font.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,10 +67,8 @@
 		7B9DFC54269FD05A00D88058 /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand.png; sourceTree = "<group>"; };
 		7B9DFC55269FD05A00D88058 /* stem_bott.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stem_bott.png; sourceTree = "<group>"; };
 		7B9DFC56269FD05A00D88058 /* mush_mid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mush_mid.png; sourceTree = "<group>"; };
-		7B9DFC6226A1108400D88058 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ground.png; path = ../../ground.png; sourceTree = "<group>"; };
 		7B9DFC6526A1191900D88058 /* pixel_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixel_font.png; sourceTree = "<group>"; };
-		7B9DFC6B26A1234500D88058 /* font1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font1.png; path = ../../font1.png; sourceTree = "<group>"; };
-		7B9DFC6D26A1274800D88058 /* pixel_font_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixel_font_green.png; sourceTree = "<group>"; };
+		7B9DFC7126A12BEA00D88058 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
 		DBDF1B522323DE3F007CECB1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
 		DBDF1B5B2323DE8D007CECB1 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
@@ -119,15 +113,13 @@
 				7B9DFC56269FD05A00D88058 /* mush_mid.png */,
 				7B9DFC50269FD05A00D88058 /* mush_right.png */,
 				7B9DFC54269FD05A00D88058 /* sand.png */,
-				7B9DFC6226A1108400D88058 /* ground.png */,
 				7B9DFC55269FD05A00D88058 /* stem_bott.png */,
 				7B9DFC51269FD05A00D88058 /* stem_mid.png */,
 				7B9DFC52269FD05A00D88058 /* stem_neck.png */,
 				7B9DFC4E269FCE8B00D88058 /* enemy.png */,
 				7B9DFC6526A1191900D88058 /* pixel_font.png */,
 				7B9DFC4F269FCE8B00D88058 /* mc.png */,
-				7B9DFC6B26A1234500D88058 /* font1.png */,
-				7B9DFC6D26A1274800D88058 /* pixel_font_green.png */,
+				7B9DFC7126A12BEA00D88058 /* ground.png */,
 				DBDF1B5B2323DE8D007CECB1 /* glm */,
 				DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */,
 				DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */,
