@@ -7,14 +7,14 @@
 
 unsigned int level3_data[] =
 {
-   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3,
-   3, 1, 1, 1, 1, 1, 1, 0, 3, 3, 3, 3, 3, 3,
-   3, 2, 2, 2, 2, 2, 2, 0, 3, 3, 3, 3, 3, 3
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 62, 62, 62, 62, 62,
+    122, 62, 62, 62, 62, 62, 62, 62, 62, 122, 122, 122, 122, 122,
+    122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122
 };
 
 void Level3::Initialize(int lives) {
@@ -24,6 +24,13 @@ void Level3::Initialize(int lives) {
     
     GLuint mapTextureID = Util::LoadTexture("tilemap.png");
     state.map = new Map(LEVEL3_WIDTH, LEVEL3_HEIGHT, level3_data, mapTextureID, 1.0f, 20, 9);
+    
+    // Initialize Background
+    state.background = new Entity();
+    state.background->textureID = Util::LoadTexture("night.png");
+    state.background->entityType = BACKGROUND;
+    state.background->position = glm::vec3(0, 0, 0);
+    state.background->modelMatrix = glm::scale(state.background->modelMatrix, glm::vec3(40, 15, 1));
     
     // Initialize Player
     state.player = new Entity();
@@ -108,6 +115,7 @@ void Level3::Update(float deltaTime) {
     
 }
 void Level3::Render(ShaderProgram *program) {
+    state.background->Render(program);
     Util::DrawText(program, Util::LoadTexture("pixel_font.png"), "Level 3", 0.25, -0.05, glm::vec3(1, -0.5, 0));
     Util::DrawText(program, Util::LoadTexture("pixel_font.png"), "Lives: " + std::to_string(state.player->lives), 0.25, -0.05, glm::vec3(1, -1, 0));
     

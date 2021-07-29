@@ -5,34 +5,22 @@
 
 #define LEVEL2_ENEMY_COUNT 1
 
-//unsigned int level2_data[] =
-//{
-//   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-//   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-//   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-//   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-//   3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-//   3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3,
-//   3, 1, 1, 1, 1, 1, 1, 0, 3, 3, 3, 3, 3, 3,
-//   3, 2, 2, 2, 2, 2, 2, 0, 3, 3, 3, 3, 3, 3
-//};
-
 unsigned int level2_data[] =
 {
     122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 153, 154, 155, 0, 0, 0, 0, 0,
+    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 153, 154, 155,
+    122, 0, 0, 0, 153, 154, 155, 0, 0, 0, 0, 0, 0, 0,
     122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    122, 0, 0, 0, 0, 0, 0, 0, 0, 102, 102, 102, 102, 102,
-    122, 102, 102, 102, 102, 102, 102, 102, 102, 122, 122, 122, 122, 122,
+    122, 102, 102, 102, 102, 102, 102, 102, 102, 102, 102, 102, 102, 102,
     122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122
 };
 
 void Level2::Initialize(int lives) {
     
     state.nextScene = -1;
-    glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+    glClearColor(0.878,0.957,0.957, 1.0f);
     
     GLuint mapTextureID = Util::LoadTexture("tilemap.png");
     state.map = new Map(LEVEL2_WIDTH, LEVEL2_HEIGHT, level2_data, mapTextureID, 1.0f, 20, 9);
@@ -40,7 +28,7 @@ void Level2::Initialize(int lives) {
     // Initialize Player
     state.player = new Entity();
     state.player->entityType = PLAYER;
-    state.player->position = glm::vec3(5, 0, 0);
+    state.player->position = glm::vec3(2, 0, 0);
     state.player->movement = glm::vec3(0);
     state.player->acceleration = glm::vec3(0, -9.81, 0);
     state.player->speed = 1.0f;

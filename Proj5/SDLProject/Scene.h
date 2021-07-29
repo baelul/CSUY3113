@@ -20,6 +20,7 @@ struct GameState {
     Map *map;
     Entity *player;
     Entity *enemies;
+    Entity *background;
     int nextScene;
 };
 

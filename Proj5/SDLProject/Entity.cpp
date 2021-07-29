@@ -280,7 +280,7 @@ void Entity::Update(float deltaTime, Entity *player, Entity *objects, int object
         //if player hits the enemy on the side (r or l) OR player falls in pit
         if(((collidedLeft || collidedRight) || (enemy->collidedLeft || enemy->collidedRight)) || position.y <= -7) {
             if(entityType == PLAYER) {isActive = false;}
-            player->position = glm::vec3(5, -2, 0);
+            player->position = glm::vec3(2, -2, 0);
         }
     }
     

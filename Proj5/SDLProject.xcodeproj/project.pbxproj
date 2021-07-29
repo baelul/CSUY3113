@@ -23,6 +23,9 @@
 		7BD5C6B126B21F3200960531 /* Lose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5C6AF26B21F3200960531 /* Lose.cpp */; };
 		7BD5C6B326B2489300960531 /* jump.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B226B2485F00960531 /* jump.wav */; };
 		7BD5C6B526B24BDF00960531 /* happy_music.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B426B24BDC00960531 /* happy_music.wav */; };
+		7BD5C6B926B254D600960531 /* day.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B626B254C900960531 /* day.jpg */; };
+		7BD5C6BA26B254D800960531 /* night.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B726B254C900960531 /* night.png */; };
+		7BD5C6BB26B254DB00960531 /* snow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B826B254C900960531 /* snow.png */; };
 		DBDF1B532323DE3F007CECB1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B522323DE3F007CECB1 /* main.cpp */; };
 		DBDF1B5E2323DE8D007CECB1 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */; };
 		DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBDF1B5C2323DE8D007CECB1 /* shaders */; };
@@ -43,6 +46,9 @@
 				DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */,
 				7BD5C6B326B2489300960531 /* jump.wav in CopyFiles */,
 				7BD5C6B526B24BDF00960531 /* happy_music.wav in CopyFiles */,
+				7BD5C6B926B254D600960531 /* day.jpg in CopyFiles */,
+				7BD5C6BA26B254D800960531 /* night.png in CopyFiles */,
+				7BD5C6BB26B254DB00960531 /* snow.png in CopyFiles */,
 				7BB40E0326B1FC31008CA34E /* tilemap.png in CopyFiles */,
 				7BD5C6AB26B213C000960531 /* enemy.png in CopyFiles */,
 				7BD5C6AA26B213BE00960531 /* mc.png in CopyFiles */,
@@ -81,6 +87,9 @@
 		7BD5C6B026B21F3200960531 /* Lose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lose.h; sourceTree = "<group>"; };
 		7BD5C6B226B2485F00960531 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		7BD5C6B426B24BDC00960531 /* happy_music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happy_music.wav; sourceTree = "<group>"; };
+		7BD5C6B626B254C900960531 /* day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day.jpg; sourceTree = "<group>"; };
+		7BD5C6B726B254C900960531 /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
+		7BD5C6B826B254C900960531 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
 		DBDF1B522323DE3F007CECB1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
 		DBDF1B5B2323DE8D007CECB1 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
@@ -127,6 +136,9 @@
 				7BD5C6A826B2135800960531 /* mc.png */,
 				7BD5C6A926B2135D00960531 /* enemy.png */,
 				7BB40DFD26B1F2A5008CA34E /* pixel_font.png */,
+				7BD5C6B626B254C900960531 /* day.jpg */,
+				7BD5C6B726B254C900960531 /* night.png */,
+				7BD5C6B826B254C900960531 /* snow.png */,
 				DBDF1B5B2323DE8D007CECB1 /* glm */,
 				DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */,
 				DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */,

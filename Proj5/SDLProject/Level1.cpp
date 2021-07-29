@@ -7,28 +7,35 @@
 
 unsigned int level1_data[] =
 {
-   122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   122, 0, 0, 0, 0, 0, 0, 0, 0, 62, 62, 62, 62, 62,
-   122, 62, 62, 62, 62, 62, 62, 62, 62, 122, 122, 122, 122, 122,
-   122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 13, 12, 13, 15,
+   0, 14, 12, 15, 0, 14, 12, 13, 15, 0, 0, 32, 0, 0,
+   0, 0, 32, 0, 0, 0, 32, 0, 0, 0, 0, 52, 0, 0
 };
 
 void Level1::Initialize(int lives) {
     
     state.nextScene = -1;
-    glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+    glClearColor(1.,0.89,0.859, 1.0f);
     
     GLuint mapTextureID = Util::LoadTexture("tilemap.png");
     state.map = new Map(LEVEL1_WIDTH, LEVEL1_HEIGHT, level1_data, mapTextureID, 1.0f, 20, 9);
     
+    // Initialize Background
+    state.background = new Entity();
+    state.background->textureID = Util::LoadTexture("day.jpg");
+    state.background->entityType = BACKGROUND;
+    state.background->position = glm::vec3(0, 0, 0);
+    state.background->modelMatrix = glm::scale(state.background->modelMatrix, glm::vec3(40, 20, 1));
+    
     // Initialize Player
     state.player = new Entity();
     state.player->entityType = PLAYER;
-    state.player->position = glm::vec3(5, 0, 0);
+    state.player->position = glm::vec3(2, 0, 0);
     state.player->movement = glm::vec3(0);
     state.player->acceleration = glm::vec3(0, -9.81, 0);
     state.player->speed = 1.0f;
@@ -57,7 +64,7 @@ void Level1::Initialize(int lives) {
     
     state.enemies[0].entityType = ENEMY;
     state.enemies[0].textureID = enemyTextureID;
-    state.enemies[0].position = glm::vec3(10, 0, 0);
+    state.enemies[0].position = glm::vec3(7, 0, 0);
     state.enemies[0].speed = 0.5;
     
     state.enemies[0].aiType = WAITANDGO;
@@ -105,9 +112,10 @@ void Level1::Update(float deltaTime) {
         state.player->lives -= 1;
     }
     
-    if (state.player->position.x >= 12) { state.nextScene = 2;}
+    if (state.player->position.x >= 13) { state.nextScene = 2;}
 }
 void Level1::Render(ShaderProgram *program) {
+    state.background->Render(program);
     Util::DrawText(program, Util::LoadTexture("pixel_font.png"), "Level 1", 0.25, -0.05, glm::vec3(1, -0.5, 0));
     Util::DrawText(program, Util::LoadTexture("pixel_font.png"), "Lives: " + std::to_string(state.player->lives), 0.25, -0.05, glm::vec3(1, -1, 0));
     
