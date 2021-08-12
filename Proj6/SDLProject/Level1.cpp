@@ -50,6 +50,14 @@ void Level1::Initialize(int lives) {
     state.nextScene = -1;
     glClearColor(0.094,0.129,0.365, 1.0f);
     
+    
+    // Halt and Initialize Music
+    Mix_HaltMusic();
+    
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+    Mix_PlayMusic(Mix_LoadMUS("find-the-exit.wav"), -1);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 2);
+    
     // Initialize Map
     GLuint mapTextureID = Util::LoadTexture("tilesheet.png");
     state.map = new Map(LEVEL1_WIDTH, LEVEL1_HEIGHT, level1_data, mapTextureID, 1.0f, 26, 8);
@@ -79,7 +87,7 @@ void Level1::Initialize(int lives) {
     
     state.player->width = 0.8f;
     
-    state.player->lives = lives;
+    state.player->lives = 3;
     
     // Initialize Enemies
     state.enemies = new Entity[LEVEL1_ENEMY_COUNT];

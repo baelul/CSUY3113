@@ -56,6 +56,15 @@ void Level2::Initialize(int lives) {
     state.nextScene = -1;
     glClearColor(0.094,0.129,0.365, 1.0f);
     
+    // Halt and Initialize Music
+    Mix_HaltMusic();
+    
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+    Mix_PlayMusic(Mix_LoadMUS("type-zero.wav"), -1);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 2);
+    
+    //music = Mix_LoadMUS("find-the-exit.wav");  //lvl3??
+    
     // Initialize Map
     GLuint mapTextureID = Util::LoadTexture("tilesheet.png");
     state.map = new Map(LEVEL2_WIDTH, LEVEL2_HEIGHT, level2_data, mapTextureID, 1.0f, 26, 8);

@@ -56,6 +56,13 @@ void Level3::Initialize(int lives) {
     state.nextScene = -1;
     glClearColor(0.094,0.129,0.365, 1.0f);
     
+    // Halt and Initialize Music
+    Mix_HaltMusic();
+    
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+    Mix_PlayMusic(Mix_LoadMUS("galactic-trek.wav"), -1);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 2);
+    
     // Initialize Map
     GLuint mapTextureID = Util::LoadTexture("tilesheet.png");
     state.map = new Map(LEVEL3_WIDTH, LEVEL3_HEIGHT, level3_data, mapTextureID, 1.0f, 26, 8);

@@ -33,7 +33,7 @@ glm::mat4 viewMatrix, modelMatrix, projectionMatrix;
 Scene *currentScene;
 Scene *sceneList[6];
 
-Mix_Music *music = NULL;
+Mix_Music *music;
 
 int lives = 3;
 
@@ -43,7 +43,7 @@ void SwitchToScene(Scene *scene) {
 }
 
 void Initialize() {
-    SDL_Init(SDL_INIT_VIDEO);
+    SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
     displayWindow = SDL_CreateWindow("Moon Walkers", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
     SDL_GL_MakeCurrent(displayWindow, context);
@@ -57,9 +57,9 @@ void Initialize() {
     program.Load("shaders/vertex_textured.glsl", "shaders/fragment_textured.glsl");
     
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
-    music = Mix_LoadMUS("music.mp3");
+    music = Mix_LoadMUS("lone-wolf.wav");
     Mix_PlayMusic(music, -1);
-    Mix_VolumeMusic(MIX_MAX_VOLUME);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 2);
     
     viewMatrix = glm::mat4(1.0f);
     modelMatrix = glm::mat4(1.0f);

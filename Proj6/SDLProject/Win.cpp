@@ -5,6 +5,8 @@ void Win::Initialize(int lives) {
     state.nextScene = -1;
     glClearColor(0.094,0.129,0.365, 1.0f);
     
+    Mix_HaltMusic();
+    
     
     // Initialize Player
     state.player = new Entity();
@@ -20,6 +22,8 @@ void Win::Initialize(int lives) {
     state.player->animTime = 0;
     state.player->animCols = 17;
     state.player->animRows = 8;
+    
+    state.player->lives = 3;
 }
 
 void Win::Update(float deltaTime) {

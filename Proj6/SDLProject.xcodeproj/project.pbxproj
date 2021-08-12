@@ -17,6 +17,11 @@
 		7B92FF4B26C4B5390000C6C8 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */; };
 		7B92FF4E26C4BA1A0000C6C8 /* outerspace.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF4D26C4BA0A0000C6C8 /* outerspace.jpg */; };
 		7B92FF4F26C4BA1C0000C6C8 /* galaxy.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF4C26C4BA0A0000C6C8 /* galaxy.jpg */; };
+		7B92FF5026C4BE8B0000C6C8 /* music.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF3F26C4AFFC0000C6C8 /* music.mp3 */; };
+		7B92FF5426C4C3900000C6C8 /* find-the-exit.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF5326C4C3850000C6C8 /* find-the-exit.wav */; };
+		7B92FF5526C4C3960000C6C8 /* galactic-trek.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF5126C4C3850000C6C8 /* galactic-trek.wav */; };
+		7B92FF5626C4C3980000C6C8 /* lone-wolf.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF5226C4C3850000C6C8 /* lone-wolf.wav */; };
+		7B92FF5826C4C4C30000C6C8 /* type-zero.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF5726C4C4BE0000C6C8 /* type-zero.wav */; };
 		7B9DFC3B268D2E5C00D88058 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DFC39268D2E5C00D88058 /* Entity.cpp */; };
 		7BB40DED26B116E4008CA34E /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BB40DEB26B116E4008CA34E /* Map.cpp */; };
 		7BB40DF026B12BD8008CA34E /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BB40DEE26B12BD8008CA34E /* Util.cpp */; };
@@ -59,6 +64,11 @@
 				7B92FF3826C495000000C6C8 /* hit.wav in CopyFiles */,
 				7B92FF3C26C495090000C6C8 /* win.wav in CopyFiles */,
 				7B92FF3A26C495050000C6C8 /* lose.wav in CopyFiles */,
+				7B92FF5026C4BE8B0000C6C8 /* music.mp3 in CopyFiles */,
+				7B92FF5526C4C3960000C6C8 /* galactic-trek.wav in CopyFiles */,
+				7B92FF5626C4C3980000C6C8 /* lone-wolf.wav in CopyFiles */,
+				7B92FF5826C4C4C30000C6C8 /* type-zero.wav in CopyFiles */,
+				7B92FF5426C4C3900000C6C8 /* find-the-exit.wav in CopyFiles */,
 				7B92FF4F26C4BA1C0000C6C8 /* galaxy.jpg in CopyFiles */,
 				7B92FF4E26C4BA1A0000C6C8 /* outerspace.jpg in CopyFiles */,
 				7BD5C6C326C0A06100960531 /* tiles.png in CopyFiles */,
@@ -95,6 +105,10 @@
 		7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		7B92FF4C26C4BA0A0000C6C8 /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galaxy.jpg; sourceTree = "<group>"; };
 		7B92FF4D26C4BA0A0000C6C8 /* outerspace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outerspace.jpg; sourceTree = "<group>"; };
+		7B92FF5126C4C3850000C6C8 /* galactic-trek.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "galactic-trek.wav"; sourceTree = "<group>"; };
+		7B92FF5226C4C3850000C6C8 /* lone-wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "lone-wolf.wav"; sourceTree = "<group>"; };
+		7B92FF5326C4C3850000C6C8 /* find-the-exit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "find-the-exit.wav"; sourceTree = "<group>"; };
+		7B92FF5726C4C4BE0000C6C8 /* type-zero.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "type-zero.wav"; sourceTree = "<group>"; };
 		7B9DFC39268D2E5C00D88058 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		7B9DFC3A268D2E5C00D88058 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		7B9DFC48268D72E800D88058 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
@@ -172,6 +186,10 @@
 				7B92FF3526C494FC0000C6C8 /* lose.wav */,
 				7B92FF3326C494FC0000C6C8 /* win.wav */,
 				7B92FF3F26C4AFFC0000C6C8 /* music.mp3 */,
+				7B92FF5326C4C3850000C6C8 /* find-the-exit.wav */,
+				7B92FF5126C4C3850000C6C8 /* galactic-trek.wav */,
+				7B92FF5226C4C3850000C6C8 /* lone-wolf.wav */,
+				7B92FF5726C4C4BE0000C6C8 /* type-zero.wav */,
 				7BB40E0226B1FC2C008CA34E /* tilemap.png */,
 				7BD5C6A826B2135800960531 /* mc.png */,
 				7BD5C6A926B2135D00960531 /* enemy.png */,
