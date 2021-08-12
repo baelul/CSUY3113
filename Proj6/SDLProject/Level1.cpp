@@ -50,7 +50,6 @@ void Level1::Initialize(int lives) {
     state.nextScene = -1;
     glClearColor(0.094,0.129,0.365, 1.0f);
     
-    
     // Halt and Initialize Music
     Mix_HaltMusic();
     

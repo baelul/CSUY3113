@@ -16,6 +16,7 @@
 #include "Util.h"
 #include "Entity.h"
 #include "Map.h"
+#include "Effects.h"
 
 struct GameState {
     Map *map;
