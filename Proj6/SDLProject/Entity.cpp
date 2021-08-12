@@ -134,69 +134,60 @@ void Entity::CheckCollisionsX(Map *map)
     }
 }
 
-void Entity::AIStopping() {
-    movement = glm::vec3(0);
-}
-
-void Entity::AIWalker() {
-    movement = glm::vec3(-1, 0, 0);
-}
-
-void Entity::AIWaitAndGo(Entity *player) {
-    switch(aiState) {
-        case IDLE:
-            if (glm::distance(position, player->position) < 3.0f) {
-                aiState = WALKING;
-            }
-            break;
-            
-        case WALKING:
-            if(player->position.x < position.x) {
-                movement = glm::vec3(-1, 0, 0);
-                animIndices = animLeft;
-            }
-            else {
-                movement = glm::vec3(1, 0, 0);
-                animIndices = animRight;
-            }
-            break;
-            
-        case ATTACKING:
-            break;
+void Entity::AIPatrolLvl2() {
+    if (position.x >= 7.5 && position.y >= -3) {
+        movement.x = -1;
+        movement.y = 0;
+        animIndices = animLeft;
+    } else if (position.x >= 7.5 && position.y <= -6.5) {
+        movement.x = 0;
+        movement.y = 1;
+        animIndices = animUp;
+    }
+    
+    if (position.x <= 1.5 && position.y >= -3) {
+        movement.x = 0;
+        movement.y = -1;
+        animIndices = animDown;
+    } else if (position.x <= 1.5 && position.y <= -6.5) {
+        movement.x = 1;
+        movement.y = 0;
+        animIndices = animRight;
     }
 }
 
-void Entity::AIPatrol() { // hard coded, would not do this in the future
-    if (position.x < 0.25) {
+void Entity::AIPatrolLvl3E1() { // range x: 3-11
+    if (position.x <= 3) {
         movement.x = 1;
         animIndices = animRight;
-    } else if (position.x > 4.5) {
+    } else if (position.x >= 11) {
         movement.x = -1;
         animIndices = animLeft;
-    } else if (position.x > 0.25 && position.x < 4.5) {
-        if (animIndices == animRight) {
-            movement.x = 1;
-        } else { movement.x = -1;}
     }
 }
 
+void Entity::AIPatrolLvl3E2() { // range y: -4.5 - -14.5
+    if (position.y <= -14.5) {
+        movement.y = 1;
+        animIndices = animUp;
+    } else if (position.y >= -4.5) {
+        movement.y = -1;
+        animIndices = animDown;
+    }
+}
 
 void Entity::AI(Entity *player) {
     switch(aiType) {
-        case STOPPING:
-            AIStopping();
+        case PATROL_LVL2:
+            AIPatrolLvl2();
             break;
             
-        case WALKER:
-            AIWalker();
+        case PATROL_LVL3_1:
+            AIPatrolLvl3E1();
             break;
             
-        case WAITANDGO:
-            AIWaitAndGo(player);
-            break;
-            
-        case PATROL:
-            AIPatrol();
+        case PATROL_LVL3_2:
+            AIPatrolLvl3E2();
             break;
     }
 }
@@ -237,13 +228,16 @@ void Entity::Update(float deltaTime, Entity *player, Entity *objects, int object
     velocity.y = movement.y;
     position += movement * speed * deltaTime;
     
-    CheckCollisionsY(map);
-    CheckCollisionsX(map);
-    
-    if (collidedRight || collidedLeft) {
-        collidedRight = false;
-        collidedLeft = false;
+    if (map != NULL) {
+        CheckCollisionsY(map);
+        CheckCollisionsX(map);
     }
+
+    
+    collidedTop = false;
+    collidedBottom = false;
+    collidedRight = false;
+    collidedLeft = false;
     
     position.y += velocity.y * deltaTime;  // Move on Y
     CheckCollisionsY(objects, objectCount); // Fix if needed
@@ -253,20 +247,27 @@ void Entity::Update(float deltaTime, Entity *player, Entity *objects, int object
     
     for (int i = 0; i < objectCount; i++) {
         Entity *enemy = &objects[i];
-        // if enemy is hit on the head/jumped on
-        if(enemy->collidedTop) {
-            enemy->isActive = false;
-        }
-        
         //if player hits the enemy on the side (r or l) OR player falls in pit
-        if((collidedLeft || collidedRight) || (enemy->collidedLeft || enemy->collidedRight)) {
-            if(entityType == PLAYER) {isActive = false;}
-            player->position = glm::vec3(2, -2, 0);
+        if((collidedLeft || collidedRight || collidedTop || collidedBottom) && (enemy->collidedLeft || enemy->collidedRight || enemy->collidedTop || enemy->collidedBottom)) {
+            if(entityType == PLAYER) {
+                isActive = false;
+                if (lives != 1) {
+                    Mix_PlayChannel(-1, hit, 0);
+                    Mix_Volume(-1,MIX_MAX_VOLUME/8);
+                }
+            }
+            //player->position = glm::vec3(2, -2, 0);
         }
     }
     
     // check key collision
-    if(CheckCollision(key)) { key->isActive = false;}
+    if (key != NULL) {
+        if(CheckCollision(key)) {
+            key->isActive = false;
+            Mix_PlayChannel(-1, key_retrieved, 0);
+            Mix_Volume(-1,MIX_MAX_VOLUME/8);
+        }
+    }
     
     modelMatrix = glm::mat4(1.0f);
     modelMatrix = glm::translate(modelMatrix, position);
@@ -280,7 +281,11 @@ void Entity::DrawSpriteFromTextureAtlas(ShaderProgram *program, GLuint textureID
     float width = 1.0f / (float)animCols;
     float height = 1.0f / (float)animRows;
     
-    if (indices == animLeft) {
+    if (indices == animLeft && entityType == PLAYER) {
+        width *= -1;
+    }
+    
+    if ((indices == animRight || indices == animDown) && entityType == ENEMY) {
         width *= -1;
     }
     
@@ -305,6 +310,7 @@ void Entity::DrawSpriteFromTextureAtlas(ShaderProgram *program, GLuint textureID
 
 void Entity::Render(ShaderProgram *program) {
     if (isActive == false) return;
+    
     program->SetModelMatrix(modelMatrix);
     
     if (animIndices != NULL) {

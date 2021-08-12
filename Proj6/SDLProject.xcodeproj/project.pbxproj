@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B92FF3226C48FF10000C6C8 /* Effects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B92FF3026C48FF10000C6C8 /* Effects.cpp */; };
+		7B92FF3826C495000000C6C8 /* hit.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF3626C494FC0000C6C8 /* hit.wav */; };
+		7B92FF3926C495030000C6C8 /* key.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF3426C494FC0000C6C8 /* key.wav */; };
+		7B92FF3A26C495050000C6C8 /* lose.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF3526C494FC0000C6C8 /* lose.wav */; };
+		7B92FF3C26C495090000C6C8 /* win.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF3326C494FC0000C6C8 /* win.wav */; };
+		7B92FF4926C4B5390000C6C8 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4626C4B5390000C6C8 /* SDL2.framework */; };
+		7B92FF4A26C4B5390000C6C8 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4726C4B5390000C6C8 /* SDL2_image.framework */; };
+		7B92FF4B26C4B5390000C6C8 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */; };
 		7B9DFC3B268D2E5C00D88058 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DFC39268D2E5C00D88058 /* Entity.cpp */; };
 		7BB40DED26B116E4008CA34E /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BB40DEB26B116E4008CA34E /* Map.cpp */; };
 		7BB40DF026B12BD8008CA34E /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BB40DEE26B12BD8008CA34E /* Util.cpp */; };
@@ -21,8 +29,6 @@
 		7BD5C6AB26B213C000960531 /* enemy.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6A926B2135D00960531 /* enemy.png */; };
 		7BD5C6AE26B21F2100960531 /* Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5C6AC26B21F2100960531 /* Win.cpp */; };
 		7BD5C6B126B21F3200960531 /* Lose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5C6AF26B21F3200960531 /* Lose.cpp */; };
-		7BD5C6B326B2489300960531 /* jump.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B226B2485F00960531 /* jump.wav */; };
-		7BD5C6B526B24BDF00960531 /* happy_music.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B426B24BDC00960531 /* happy_music.wav */; };
 		7BD5C6B926B254D600960531 /* day.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B626B254C900960531 /* day.jpg */; };
 		7BD5C6BA26B254D800960531 /* night.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B726B254C900960531 /* night.png */; };
 		7BD5C6BB26B254DB00960531 /* snow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6B826B254C900960531 /* snow.png */; };
@@ -31,14 +37,13 @@
 		7BD5C6C426C0A06700960531 /* char_and_enemies.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6C226C0A02600960531 /* char_and_enemies.png */; };
 		7BD5C6C626C0C19F00960531 /* tilesheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6C526C0C19C00960531 /* tilesheet.png */; };
 		7BD5C6C826C0E0F500960531 /* key.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6C726C0E0EF00960531 /* key.png */; };
+		7BFFE99B26C34B3600D4432B /* space.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BFFE99A26C349FA00D4432B /* space.jpg */; };
+		7BFFE99F26C34F7300D4432B /* stars.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BFFE99E26C34F7100D4432B /* stars.jpg */; };
 		DBDF1B532323DE3F007CECB1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B522323DE3F007CECB1 /* main.cpp */; };
 		DBDF1B5E2323DE8D007CECB1 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */; };
 		DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBDF1B5C2323DE8D007CECB1 /* shaders */; };
 		DBDF1B632323DEDA007CECB1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B622323DEDA007CECB1 /* OpenGL.framework */; };
 		DBDF1B652323DEDF007CECB1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B642323DEDF007CECB1 /* Cocoa.framework */; };
-		DBDF1B692323DEEA007CECB1 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B662323DEEA007CECB1 /* SDL2.framework */; };
-		DBDF1B6A2323DEEA007CECB1 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B672323DEEA007CECB1 /* SDL2_image.framework */; };
-		DBDF1B6B2323DEEA007CECB1 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B682323DEEA007CECB1 /* SDL2_mixer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,13 +53,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				7B92FF3926C495030000C6C8 /* key.wav in CopyFiles */,
+				7B92FF3826C495000000C6C8 /* hit.wav in CopyFiles */,
+				7B92FF3C26C495090000C6C8 /* win.wav in CopyFiles */,
+				7B92FF3A26C495050000C6C8 /* lose.wav in CopyFiles */,
 				7BD5C6C326C0A06100960531 /* tiles.png in CopyFiles */,
+				7BFFE99F26C34F7300D4432B /* stars.jpg in CopyFiles */,
 				7BD5C6C426C0A06700960531 /* char_and_enemies.png in CopyFiles */,
 				7BD5C6C626C0C19F00960531 /* tilesheet.png in CopyFiles */,
 				7BD5C6C826C0E0F500960531 /* key.png in CopyFiles */,
+				7BFFE99B26C34B3600D4432B /* space.jpg in CopyFiles */,
 				DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */,
-				7BD5C6B326B2489300960531 /* jump.wav in CopyFiles */,
-				7BD5C6B526B24BDF00960531 /* happy_music.wav in CopyFiles */,
 				7BD5C6B926B254D600960531 /* day.jpg in CopyFiles */,
 				7BD5C6BA26B254D800960531 /* night.png in CopyFiles */,
 				7BD5C6BB26B254DB00960531 /* snow.png in CopyFiles */,
@@ -70,6 +79,16 @@
 
 /* Begin PBXFileReference section */
 		7B0D1436266E7C01000CE08D /* SDLProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B92FF3026C48FF10000C6C8 /* Effects.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Effects.cpp; sourceTree = "<group>"; };
+		7B92FF3126C48FF10000C6C8 /* Effects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Effects.h; sourceTree = "<group>"; };
+		7B92FF3326C494FC0000C6C8 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		7B92FF3426C494FC0000C6C8 /* key.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = key.wav; sourceTree = "<group>"; };
+		7B92FF3526C494FC0000C6C8 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		7B92FF3626C494FC0000C6C8 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
+		7B92FF3F26C4AFFC0000C6C8 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		7B92FF4626C4B5390000C6C8 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		7B92FF4726C4B5390000C6C8 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		7B9DFC39268D2E5C00D88058 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		7B9DFC3A268D2E5C00D88058 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		7B9DFC48268D72E800D88058 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
@@ -95,8 +114,6 @@
 		7BD5C6AD26B21F2100960531 /* Win.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Win.h; sourceTree = "<group>"; };
 		7BD5C6AF26B21F3200960531 /* Lose.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lose.cpp; sourceTree = "<group>"; };
 		7BD5C6B026B21F3200960531 /* Lose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lose.h; sourceTree = "<group>"; };
-		7BD5C6B226B2485F00960531 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
-		7BD5C6B426B24BDC00960531 /* happy_music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happy_music.wav; sourceTree = "<group>"; };
 		7BD5C6B626B254C900960531 /* day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day.jpg; sourceTree = "<group>"; };
 		7BD5C6B726B254C900960531 /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
 		7BD5C6B826B254C900960531 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
@@ -105,6 +122,8 @@
 		7BD5C6C226C0A02600960531 /* char_and_enemies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = char_and_enemies.png; sourceTree = "<group>"; };
 		7BD5C6C526C0C19C00960531 /* tilesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tilesheet.png; sourceTree = "<group>"; };
 		7BD5C6C726C0E0EF00960531 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		7BFFE99A26C349FA00D4432B /* space.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = space.jpg; sourceTree = "<group>"; };
+		7BFFE99E26C34F7100D4432B /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stars.jpg; path = ../../../../Desktop/stars.jpg; sourceTree = "<group>"; };
 		DBDF1B522323DE3F007CECB1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
 		DBDF1B5B2323DE8D007CECB1 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
@@ -112,9 +131,6 @@
 		DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
 		DBDF1B622323DEDA007CECB1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		DBDF1B642323DEDF007CECB1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		DBDF1B662323DEEA007CECB1 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
-		DBDF1B672323DEEA007CECB1 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
-		DBDF1B682323DEEA007CECB1 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +138,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDF1B692323DEEA007CECB1 /* SDL2.framework in Frameworks */,
-				DBDF1B6A2323DEEA007CECB1 /* SDL2_image.framework in Frameworks */,
-				DBDF1B6B2323DEEA007CECB1 /* SDL2_mixer.framework in Frameworks */,
+				7B92FF4926C4B5390000C6C8 /* SDL2.framework in Frameworks */,
+				7B92FF4B26C4B5390000C6C8 /* SDL2_mixer.framework in Frameworks */,
 				DBDF1B652323DEDF007CECB1 /* Cocoa.framework in Frameworks */,
 				DBDF1B632323DEDA007CECB1 /* OpenGL.framework in Frameworks */,
+				7B92FF4A26C4B5390000C6C8 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +161,11 @@
 		DBDF1B512323DE3F007CECB1 /* SDLProject */ = {
 			isa = PBXGroup;
 			children = (
-				7BD5C6B226B2485F00960531 /* jump.wav */,
-				7BD5C6B426B24BDC00960531 /* happy_music.wav */,
+				7B92FF3626C494FC0000C6C8 /* hit.wav */,
+				7B92FF3426C494FC0000C6C8 /* key.wav */,
+				7B92FF3526C494FC0000C6C8 /* lose.wav */,
+				7B92FF3326C494FC0000C6C8 /* win.wav */,
+				7B92FF3F26C4AFFC0000C6C8 /* music.mp3 */,
 				7BB40E0226B1FC2C008CA34E /* tilemap.png */,
 				7BD5C6A826B2135800960531 /* mc.png */,
 				7BD5C6A926B2135D00960531 /* enemy.png */,
@@ -159,6 +178,8 @@
 				7BD5C6C526C0C19C00960531 /* tilesheet.png */,
 				7BD5C6C226C0A02600960531 /* char_and_enemies.png */,
 				7BD5C6C726C0E0EF00960531 /* key.png */,
+				7BFFE99A26C349FA00D4432B /* space.jpg */,
+				7BFFE99E26C34F7100D4432B /* stars.jpg */,
 				DBDF1B5B2323DE8D007CECB1 /* glm */,
 				DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */,
 				DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */,
@@ -185,6 +206,8 @@
 				7BD5C6AD26B21F2100960531 /* Win.h */,
 				7BD5C6AF26B21F3200960531 /* Lose.cpp */,
 				7BD5C6B026B21F3200960531 /* Lose.h */,
+				7B92FF3026C48FF10000C6C8 /* Effects.cpp */,
+				7B92FF3126C48FF10000C6C8 /* Effects.h */,
 			);
 			path = SDLProject;
 			sourceTree = "<group>";
@@ -192,9 +215,9 @@
 		DBDF1B5F2323DE92007CECB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DBDF1B672323DEEA007CECB1 /* SDL2_image.framework */,
-				DBDF1B682323DEEA007CECB1 /* SDL2_mixer.framework */,
-				DBDF1B662323DEEA007CECB1 /* SDL2.framework */,
+				7B92FF4726C4B5390000C6C8 /* SDL2_image.framework */,
+				7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */,
+				7B92FF4626C4B5390000C6C8 /* SDL2.framework */,
 				DBDF1B642323DEDF007CECB1 /* Cocoa.framework */,
 				DBDF1B622323DEDA007CECB1 /* OpenGL.framework */,
 			);
@@ -264,6 +287,7 @@
 				DBDF1B532323DE3F007CECB1 /* main.cpp in Sources */,
 				7B9DFC3B268D2E5C00D88058 /* Entity.cpp in Sources */,
 				7BB40E0126B1F415008CA34E /* Level3.cpp in Sources */,
+				7B92FF3226C48FF10000C6C8 /* Effects.cpp in Sources */,
 				7BB40DED26B116E4008CA34E /* Map.cpp in Sources */,
 				DBDF1B5E2323DE8D007CECB1 /* ShaderProgram.cpp in Sources */,
 				7BB40DF926B13243008CA34E /* Level2.cpp in Sources */,
@@ -393,6 +417,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,
@@ -410,6 +435,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,

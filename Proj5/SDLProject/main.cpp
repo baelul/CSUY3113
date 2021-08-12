@@ -63,11 +63,12 @@ void Initialize() {
      Music: “Happy Tribe”, from PlayOnLoop.com
      Licensed under Creative Commons by Attribution 4.0
      */
+    
     music = Mix_LoadMUS("happy_music.wav");
     Mix_PlayMusic(music, -1);
     Mix_VolumeMusic(MIX_MAX_VOLUME / 4);
     
-    jump = Mix_LoadWAV("jump.wav");
+    //jump = Mix_LoadWAV("jump.wav");
     
     viewMatrix = glm::mat4(1.0f);
     modelMatrix = glm::mat4(1.0f);
@@ -119,8 +120,8 @@ void ProcessInput() {
                         if (currentScene == sceneList[1] || currentScene == sceneList[2] || currentScene == sceneList[3]) {
                             if (currentScene->state.player->collidedBottom) {
                                 currentScene->state.player->jump = true;
-                                Mix_PlayChannel(-1, jump, 0);
-                                Mix_Volume(-1,MIX_MAX_VOLUME/8);
+                                //Mix_PlayChannel(-1, jump, 0);
+                                //Mix_Volume(-1,MIX_MAX_VOLUME/8);
                             }
                             
                         }

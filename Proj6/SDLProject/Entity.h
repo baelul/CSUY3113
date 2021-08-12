@@ -6,6 +6,7 @@
 #endif
 
 #define GL_GLEXT_PROTOTYPES 1
+#include <SDL_mixer.h>
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include "glm/mat4x4.hpp"
@@ -15,7 +16,7 @@
 
 enum EntityType {PLAYER, PLATFORM, ENEMY, BACKGROUND, KEY};
 
-enum AIType { STOPPING, PATROL, WALKER, WAITANDGO };
+enum AIType { PATROL_LVL2, PATROL_LVL3_1, PATROL_LVL3_2 };
 enum AIState { IDLE, WALKING, ATTACKING };
 
 class Entity {
@@ -57,6 +58,9 @@ public:
     
     int lives;
     
+    Mix_Chunk *key_retrieved = Mix_LoadWAV("key.wav");
+    Mix_Chunk *hit = Mix_LoadWAV("hit.wav");
+    
     Entity();
     
     bool CheckCollision(Entity *other);
@@ -73,9 +77,7 @@ public:
     bool areEnemiesActive(Entity *enemies, int enemyCount);
     
     void AI(Entity *player);
-    void AIStopping();
-    void AIWalker();
-    void AIPatrol();
-    void AIJump();
-    void AIWaitAndGo(Entity *player);
+    void AIPatrolLvl2();
+    void AIPatrolLvl3E1();
+    void AIPatrolLvl3E2();
 };

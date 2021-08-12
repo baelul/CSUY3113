@@ -33,8 +33,7 @@ glm::mat4 viewMatrix, modelMatrix, projectionMatrix;
 Scene *currentScene;
 Scene *sceneList[6];
 
-Mix_Music *music;
-Mix_Chunk *jump;
+Mix_Music *music = NULL;
 
 int lives = 3;
 
@@ -58,16 +57,9 @@ void Initialize() {
     program.Load("shaders/vertex_textured.glsl", "shaders/fragment_textured.glsl");
     
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
-    
-    /*
-     Music: “Happy Tribe”, from PlayOnLoop.com
-     Licensed under Creative Commons by Attribution 4.0
-     */
-    music = Mix_LoadMUS("happy_music.wav");
+    music = Mix_LoadMUS("music.mp3");
     Mix_PlayMusic(music, -1);
-    Mix_VolumeMusic(MIX_MAX_VOLUME / 4);
-    
-    jump = Mix_LoadWAV("jump.wav");
+    Mix_VolumeMusic(MIX_MAX_VOLUME);
     
     viewMatrix = glm::mat4(1.0f);
     modelMatrix = glm::mat4(1.0f);
@@ -122,20 +114,12 @@ void ProcessInput() {
                     case SDLK_DOWN:
                         // Move the player down
                         break;
-                        
-//                    case SDLK_SPACE:
-//                        if (currentScene == sceneList[1] || currentScene == sceneList[2] || currentScene == sceneList[3]) {
-//                            if (currentScene->state.player->collidedBottom) {
-//                                currentScene->state.player->jump = true;
-//                                Mix_PlayChannel(-1, jump, 0);
-//                                Mix_Volume(-1,MIX_MAX_VOLUME/8);
-//                            }
-//
-//                        }
-//                        break;
+    
                     case SDLK_RETURN:
                         if (currentScene == sceneList[0]) {
-                            SwitchToScene(sceneList[1]);
+                            SwitchToScene(sceneList[1]); // menu screen goes to lvl 1
+                        } else if (currentScene == sceneList[5] || currentScene == sceneList[4]) {
+                            SwitchToScene(sceneList[0]); // if lose or win, give chance to play again
                         }
                         break;
                 }
@@ -196,7 +180,7 @@ void Update() {
     viewMatrix = glm::mat4(1.0f);
     if (currentScene == sceneList[1] || currentScene == sceneList[2] || currentScene == sceneList[3]) {
         viewMatrix = glm::translate(viewMatrix, glm::vec3(-currentScene->state.player->position.x, -currentScene->state.player->position.y, 0));
-    }
+    } 
 }
 
 //projectionMatrix = glm::ortho(-5.0f, 5.0f, -3.75f, 3.75f, -1.0f, 1.0f);
