@@ -6,14 +6,15 @@ void Menu::Initialize(int lives) {
     
     // Initialize Background
     state.background = new Entity();
-    state.background->textureID = Util::LoadTexture("stars.jpg");
+    state.background->textureID = Util::LoadTexture("galaxy.jpg");
     state.background->entityType = BACKGROUND;
-    state.background->position = glm::vec3(0, 0, 0);
-    state.background->modelMatrix = glm::scale(state.background->modelMatrix, glm::vec3(13, -13, 1));
+    state.background->position = glm::vec3(0, 1, 0);
+    //state.background->modelMatrix = glm::scale(state.background->modelMatrix, glm::vec3(13, -13, 1));
+    state.background->modelMatrix = glm::scale(state.background->modelMatrix, glm::vec3(11, 9, 1));
 }
 
 void Menu::Update(float deltaTime) {
-    state.background->modelMatrix = glm::rotate(state.background->modelMatrix, glm::radians(5 * deltaTime), glm::vec3(0.0f, 0.0f, 1.0f));
+    //state.background->modelMatrix = glm::rotate(state.background->modelMatrix, glm::radians(5 * deltaTime), glm::vec3(0.0f, 0.0f, 1.0f));
 }
 
 void Menu::Render(ShaderProgram *program) {

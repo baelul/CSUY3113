@@ -15,6 +15,8 @@
 		7B92FF4926C4B5390000C6C8 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4626C4B5390000C6C8 /* SDL2.framework */; };
 		7B92FF4A26C4B5390000C6C8 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4726C4B5390000C6C8 /* SDL2_image.framework */; };
 		7B92FF4B26C4B5390000C6C8 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */; };
+		7B92FF4E26C4BA1A0000C6C8 /* outerspace.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF4D26C4BA0A0000C6C8 /* outerspace.jpg */; };
+		7B92FF4F26C4BA1C0000C6C8 /* galaxy.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B92FF4C26C4BA0A0000C6C8 /* galaxy.jpg */; };
 		7B9DFC3B268D2E5C00D88058 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DFC39268D2E5C00D88058 /* Entity.cpp */; };
 		7BB40DED26B116E4008CA34E /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BB40DEB26B116E4008CA34E /* Map.cpp */; };
 		7BB40DF026B12BD8008CA34E /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BB40DEE26B12BD8008CA34E /* Util.cpp */; };
@@ -57,6 +59,8 @@
 				7B92FF3826C495000000C6C8 /* hit.wav in CopyFiles */,
 				7B92FF3C26C495090000C6C8 /* win.wav in CopyFiles */,
 				7B92FF3A26C495050000C6C8 /* lose.wav in CopyFiles */,
+				7B92FF4F26C4BA1C0000C6C8 /* galaxy.jpg in CopyFiles */,
+				7B92FF4E26C4BA1A0000C6C8 /* outerspace.jpg in CopyFiles */,
 				7BD5C6C326C0A06100960531 /* tiles.png in CopyFiles */,
 				7BFFE99F26C34F7300D4432B /* stars.jpg in CopyFiles */,
 				7BD5C6C426C0A06700960531 /* char_and_enemies.png in CopyFiles */,
@@ -89,6 +93,8 @@
 		7B92FF4626C4B5390000C6C8 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		7B92FF4726C4B5390000C6C8 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		7B92FF4826C4B5390000C6C8 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		7B92FF4C26C4BA0A0000C6C8 /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galaxy.jpg; sourceTree = "<group>"; };
+		7B92FF4D26C4BA0A0000C6C8 /* outerspace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outerspace.jpg; sourceTree = "<group>"; };
 		7B9DFC39268D2E5C00D88058 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		7B9DFC3A268D2E5C00D88058 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		7B9DFC48268D72E800D88058 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
@@ -180,6 +186,8 @@
 				7BD5C6C726C0E0EF00960531 /* key.png */,
 				7BFFE99A26C349FA00D4432B /* space.jpg */,
 				7BFFE99E26C34F7100D4432B /* stars.jpg */,
+				7B92FF4C26C4BA0A0000C6C8 /* galaxy.jpg */,
+				7B92FF4D26C4BA0A0000C6C8 /* outerspace.jpg */,
 				DBDF1B5B2323DE8D007CECB1 /* glm */,
 				DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */,
 				DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */,
