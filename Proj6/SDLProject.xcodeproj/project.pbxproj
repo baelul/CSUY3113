@@ -45,7 +45,6 @@
 		7BD5C6C626C0C19F00960531 /* tilesheet.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6C526C0C19C00960531 /* tilesheet.png */; };
 		7BD5C6C826C0E0F500960531 /* key.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5C6C726C0E0EF00960531 /* key.png */; };
 		7BFFE99B26C34B3600D4432B /* space.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BFFE99A26C349FA00D4432B /* space.jpg */; };
-		7BFFE99F26C34F7300D4432B /* stars.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BFFE99E26C34F7100D4432B /* stars.jpg */; };
 		DBDF1B532323DE3F007CECB1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B522323DE3F007CECB1 /* main.cpp */; };
 		DBDF1B5E2323DE8D007CECB1 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBDF1B5D2323DE8D007CECB1 /* ShaderProgram.cpp */; };
 		DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBDF1B5C2323DE8D007CECB1 /* shaders */; };
@@ -72,7 +71,6 @@
 				7B92FF4F26C4BA1C0000C6C8 /* galaxy.jpg in CopyFiles */,
 				7B92FF4E26C4BA1A0000C6C8 /* outerspace.jpg in CopyFiles */,
 				7BD5C6C326C0A06100960531 /* tiles.png in CopyFiles */,
-				7BFFE99F26C34F7300D4432B /* stars.jpg in CopyFiles */,
 				7BD5C6C426C0A06700960531 /* char_and_enemies.png in CopyFiles */,
 				7BD5C6C626C0C19F00960531 /* tilesheet.png in CopyFiles */,
 				7BD5C6C826C0E0F500960531 /* key.png in CopyFiles */,
@@ -143,7 +141,6 @@
 		7BD5C6C526C0C19C00960531 /* tilesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tilesheet.png; sourceTree = "<group>"; };
 		7BD5C6C726C0E0EF00960531 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		7BFFE99A26C349FA00D4432B /* space.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = space.jpg; sourceTree = "<group>"; };
-		7BFFE99E26C34F7100D4432B /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stars.jpg; path = ../../../../Desktop/stars.jpg; sourceTree = "<group>"; };
 		DBDF1B522323DE3F007CECB1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
 		DBDF1B5B2323DE8D007CECB1 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
@@ -203,7 +200,6 @@
 				7BD5C6C226C0A02600960531 /* char_and_enemies.png */,
 				7BD5C6C726C0E0EF00960531 /* key.png */,
 				7BFFE99A26C349FA00D4432B /* space.jpg */,
-				7BFFE99E26C34F7100D4432B /* stars.jpg */,
 				7B92FF4C26C4BA0A0000C6C8 /* galaxy.jpg */,
 				7B92FF4D26C4BA0A0000C6C8 /* outerspace.jpg */,
 				DBDF1B5B2323DE8D007CECB1 /* glm */,
