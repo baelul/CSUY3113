@@ -4,6 +4,13 @@ void Menu::Initialize(int lives) {
     state.nextScene = -1;
     glClearColor(0, 0, 0, 1.0f);
     
+    // Halt and Initialize Music
+    Mix_HaltMusic();
+    
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+    Mix_PlayMusic(Mix_LoadMUS("lone-wolf.wav"), -1);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 2);
+    
     // Initialize Background
     state.background = new Entity();
     state.background->textureID = Util::LoadTexture("galaxy.jpg");
