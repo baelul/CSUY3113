@@ -12,6 +12,13 @@ To read the original prompt, click [here](https://github.com/carmineguida/CS3113
 ![proj-5-lvl2](https://github.com/baelul/CSUY3113/blob/main/Proj5/lvl2.png)
 ![proj-5-lvl3](https://github.com/baelul/CSUY3113/blob/main/Proj5/lvl3.png)
 
+## How to Play
+
+Use the left and right arrow keys to move the character (green alien). Use space bar to jump. Avoid the enemies (the pink aliens). Your goal is not to get touched by  enemies and to pass through all three levels. You don't have to, but 
+you can defeat enemies by jumping on top of their heads.
+
+You win if you can successfully make it through the three levels. You lose if lose all three lives.
+
 ## Technologies
 * XCode
 * C++ and C
