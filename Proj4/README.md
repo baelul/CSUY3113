@@ -6,10 +6,10 @@ Learn and use AI behaviors. To read the original prompt, click [here](https://gi
 
 ### PREVIEW
 
-Winning Playthrough
+Winning Playthrough <br>
 ![proj-4-gif-win](https://github.com/baelul/CSUY3113/blob/main/Proj4/Proj4Win.gif)
 
-Losing Playthrough
+Losing Playthrough<br>
 ![proj-4-gif-lose](https://github.com/baelul/CSUY3113/blob/main/Proj4/Proj4Lose.gif)
 
 # Technlogies
