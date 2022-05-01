@@ -11,7 +11,7 @@ I've attached a gif of my game below!
 
 ### PREVIEW
 
-![proj-1-gif](https://github.com/baelul/CSUY3113/blob/main/Proj1/Proj-1.gif)
+![proj-1-gif](https://github.com/baelul/CSUY3113/blob/main/Proj1/Proj1.gif)
 
 # Technlogies
 * XCode
