@@ -1,7 +1,7 @@
 
 # Project 1 - Simple 2D Scene
 # Project Aim
-Create a simple 2D game. To read the original prompt, click [here] (https://github.com/carmineguida/CS3113/blob/master/Projects/Project%201%20-%20Simple%202D%20Scene.pdf). 
+Create a simple 2D game. To read the original prompt, click [here](https://github.com/carmineguida/CS3113/blob/master/Projects/Project%201%20-%20Simple%202D%20Scene.pdf). 
 
 ## Project Background
 
